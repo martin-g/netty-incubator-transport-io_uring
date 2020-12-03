@@ -127,7 +127,7 @@
       </plugin>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.0</version>
+        <version>3.8.1</version>
         <configuration>
           <compilerVersion>1.8</compilerVersion>
           <fork>true</fork>
@@ -155,7 +155,7 @@
       </plugin>
       <plugin>
         <artifactId>maven-checkstyle-plugin</artifactId>
-        <version>3.1.0</version>
+        <version>3.1.1</version>
         <executions>
           <execution>
             <id>check-style</id>
@@ -186,13 +186,13 @@
           <dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty-build-common</artifactId>
-	    <version>${netty.build.version}</version>
+            <version>${netty.build.version}</version>
           </dependency>
         </dependencies>
       </plugin>
       <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>2.22.1</version>
+        <version>2.22.2</version>
         <configuration>
           <includes>
             <include>**/*Test*.java</include>
@@ -219,7 +219,7 @@
       <plugin>
         <groupId>org.apache.felix</groupId>
         <artifactId>maven-bundle-plugin</artifactId>
-        <version>2.5.4</version>
+        <version>5.1.1</version>
         <executions>
           <execution>
             <id>generate-manifest</id>
@@ -246,7 +246,7 @@
 
       <plugin>
         <artifactId>maven-source-plugin</artifactId>
-        <version>3.2.0</version>
+        <version>3.2.1</version>
         <!-- Eclipse-related OSGi manifests
              See https://github.com/netty/netty/issues/3886
              More information: https://rajakannappan.blogspot.ie/2010/03/automating-eclipse-source-bundle.html -->
@@ -282,7 +282,7 @@
       </plugin>
       <plugin>
         <artifactId>maven-javadoc-plugin</artifactId>
-        <version>2.10.4</version>
+        <version>3.2.0</version>
         <configuration>
           <detectOfflineLinks>false</detectOfflineLinks>
           <breakiterator>true</breakiterator>
@@ -312,12 +312,12 @@
           <dependency>
             <groupId>org.apache.maven.scm</groupId>
             <artifactId>maven-scm-api</artifactId>
-            <version>1.9.4</version>
+            <version>1.11.2</version>
           </dependency>
           <dependency>
             <groupId>org.apache.maven.scm</groupId>
             <artifactId>maven-scm-provider-gitexe</artifactId>
-            <version>1.9.4</version>
+            <version>1.11.2</version>
           </dependency>
         </dependencies>
       </plugin>
@@ -339,7 +339,7 @@
         <plugins>
           <plugin>
             <artifactId>maven-dependency-plugin</artifactId>
-            <version>2.10</version>
+            <version>3.1.2</version>
             <executions>
               <!-- unpack the unix-common static library and include files -->
               <execution>
@@ -364,7 +364,7 @@
           <plugin>
             <groupId>org.fusesource.hawtjni</groupId>
             <artifactId>maven-hawtjni-plugin</artifactId>
-            <version>1.14</version>
+            <version>1.15</version>
             <executions>
               <execution>
                 <id>build-native-lib</id>
