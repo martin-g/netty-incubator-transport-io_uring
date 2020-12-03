@@ -24,7 +24,7 @@
 
   <groupId>io.netty.incubator</groupId>
   <artifactId>netty-incubator-transport-native-io_uring</artifactId>
-  <version>0.0.2.Final-SNAPSHOT</version>
+  <version>0.0.3.Final-SNAPSHOT</version>
   <name>Netty/Incubator/Transport/Native/io_uring</name>
   <packaging>jar</packaging>
   <url>https://netty.io/</url>
