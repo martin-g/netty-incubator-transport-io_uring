@@ -22,7 +22,7 @@ import static io.netty.incubator.channel.uring.UserData.decode;
 /**
  * Completion queue implementation for io_uring.
  */
-final class IOUringCompletionQueue {
+public final class IOUringCompletionQueue {
 
     //these offsets are used to access specific properties
     //CQE (https://github.com/axboe/liburing/blob/master/src/include/liburing/io_uring.h#L162)

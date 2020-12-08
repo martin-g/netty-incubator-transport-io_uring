@@ -23,7 +23,7 @@ import static io.netty.incubator.channel.uring.UserData.encode;
 import static java.lang.Math.max;
 import static java.lang.Math.min;
 
-final class IOUringSubmissionQueue {
+public final class IOUringSubmissionQueue {
     private static final InternalLogger logger = InternalLoggerFactory.getInstance(IOUringSubmissionQueue.class);
 
     private static final long SQE_SIZE = 64;
@@ -177,7 +177,7 @@ final class IOUringSubmissionQueue {
         return enqueueSqe(Native.IORING_OP_SENDMSG, flags(), 0, fd, msgHdr, 1, 0, extraData);
     }
 
-    boolean addRead(int fd, long bufferAddress, int pos, int limit, short extraData) {
+    public boolean addRead(int fd, long bufferAddress, int pos, int limit, short extraData) {
         return enqueueSqe(Native.IORING_OP_READ, flags(), 0, fd, bufferAddress + pos, limit - pos, 0, extraData);
     }
 
@@ -185,7 +185,7 @@ final class IOUringSubmissionQueue {
         return enqueueSqe(Native.IORING_OP_WRITE, flags(), 0, fd, bufferAddress + pos, limit - pos, 0, extraData);
     }
 
-    boolean addAccept(int fd, long address, long addressLength, short extraData) {
+    public boolean addAccept(int fd, long address, long addressLength, short extraData) {
         return enqueueSqe(Native.IORING_OP_ACCEPT, flags(), Native.SOCK_NONBLOCK | Native.SOCK_CLOEXEC, fd,
                 address, 0, addressLength, extraData);
     }
@@ -201,7 +201,7 @@ final class IOUringSubmissionQueue {
         return enqueueSqe(Native.IORING_OP_CONNECT, flags(), 0, fd, socketAddress, 0, socketAddressLength, extraData);
     }
 
-    boolean addWritev(int fd, long iovecArrayAddress, int length, short extraData) {
+    public boolean addWritev(int fd, long iovecArrayAddress, int length, short extraData) {
         return enqueueSqe(Native.IORING_OP_WRITEV, flags(), 0, fd, iovecArrayAddress, length, 0, extraData);
     }
 
